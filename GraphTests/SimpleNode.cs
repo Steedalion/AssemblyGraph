@@ -1,4 +1,4 @@
-﻿using AssemblyGraph;
+﻿using GraphDomain;
 
 namespace Graph
 {

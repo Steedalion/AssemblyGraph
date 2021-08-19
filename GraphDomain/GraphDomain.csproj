@@ -38,7 +38,13 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="MonoBehaviour1.cs" />
+        <Compile Include="AddingEdgeWithoutNode.cs" />
+        <Compile Include="EdgeStore.cs" />
+        <Compile Include="GEdge.cs" />
+        <Compile Include="GNode.cs" />
+        <Compile Include="IndexStore.cs" />
+        <Compile Include="Graph.cs" />
+        <Compile Include="NodeStore.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

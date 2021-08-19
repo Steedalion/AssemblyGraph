@@ -40,7 +40,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="GraphNodeManipulationTests.cs" />
+        <Compile Include="EdgeWithoutCosts.cs" />
+        <Compile Include="GraphBaseTests.cs" />
+        <Compile Include="GraphEdgesWithCosts.cs" />
+        <Compile Include="GraphEdgeTests.cs" />
+        <Compile Include="NodeTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="SimpleEdge.cs" />
         <Compile Include="SimpleNode.cs" />

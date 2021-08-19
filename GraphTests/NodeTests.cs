@@ -1,13 +1,13 @@
-﻿using AssemblyGraph;
+﻿using GraphDomain;
 using NUnit.Framework;
 
 namespace Graph
 {
-    public class GraphNodeManipulationTests
+    public class NodeTests : GraphBaseTests
     {
-        private Graph<SimpleNode, SimpleEdge> graph;
         private SimpleNode simpleNode;
         private const int SimpleNodeIndex = 10;
+
 
         [SetUp]
         public void SetUp()
@@ -48,12 +48,6 @@ namespace Graph
             Assert.AreEqual(2, graph.NumberOfNodes());
         }
 
-        private SimpleNode AddNodeWithIndex(int index)
-        {
-            SimpleNode node2 = new SimpleNode(index);
-            graph.AddNode(node2);
-            return node2;
-        }
 
         [Test]
         public void GetNode()
@@ -99,7 +93,7 @@ namespace Graph
             AddNodeWithIndex(1);
             AddNodeWithIndex(0);
             AddNodeWithIndex(3);
-             graph.AddNode(simpleNode);
+            graph.AddNode(simpleNode);
             Assert.AreEqual(2, graph.GetNextAvailableIndex());
         }
 
@@ -110,8 +104,19 @@ namespace Graph
             {
                 AddNodeWithIndex(i);
             }
+
             graph.RemoveNode(5);
             Assert.AreEqual(5, graph.GetNextAvailableIndex());
+        }
+
+        [Test]
+        public void EmptyGraphContainsNothing()
+        {
+            Assert.IsFalse( graph.isPresent(SimpleNodeIndex));
+            AddNodeWithIndex(1);
+            Assert.IsTrue(graph.isPresent(1));
+            graph.RemoveNode(1);
+            Assert.IsFalse(graph.isPresent(1));
         }
     }
 }
