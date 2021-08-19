@@ -62,6 +62,11 @@
         {
             return indexs.Contains(nodeIndex);
         }
+
+        public int[] GetOutWardEdges(int nodeIndex)
+        {
+            return edges.GetOutwardEdges(nodeIndex);
+        }
     }
 
     // public class AssemblyComponentBfs : GraphSearch

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{1A83A5F6-1810-44AE-9B83-6E68A9BD1E40}</ProjectGuid>
+        <ProjectGuid>{5DF8056E-AA63-4D79-BC86-5ACB762EF2BD}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>Graph</RootNamespace>
-        <AssemblyName>GraphTests</AssemblyName>
+        <RootNamespace>Search</RootNamespace>
+        <AssemblyName>SearchAlgs</AssemblyName>
         <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -32,33 +32,19 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
-          <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
-        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="BFS.cs" />
-        <Compile Include="BfsStackTests.cs" />
-        <Compile Include="EdgeWithoutCosts.cs" />
-        <Compile Include="GraphBaseTests.cs" />
-        <Compile Include="GraphEdgesWithCosts.cs" />
-        <Compile Include="GraphEdgeTests.cs" />
-        <Compile Include="NodeTests.cs" />
+        <Compile Include="BreadthFirstSearch.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="SimpleEdge.cs" />
-        <Compile Include="SimpleNode.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\GraphDomain\GraphDomain.csproj">
         <Project>{6e24f13f-c6a1-44a0-81d5-6a31e40031e6}</Project>
         <Name>GraphDomain</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\SearchAlgs\SearchAlgs.csproj">
-        <Project>{5df8056e-aa63-4d79-bc86-5acb762ef2bd}</Project>
-        <Name>SearchAlgs</Name>
       </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

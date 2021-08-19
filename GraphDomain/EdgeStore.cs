@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GraphDomain
@@ -64,6 +65,11 @@ namespace GraphDomain
             }
 
             return builder.ToString();
+        }
+
+        public int[] GetOutwardEdges(int nodeIndex)
+        {
+            return !edges.ContainsKey(nodeIndex) ? new int[0] : edges[nodeIndex].Keys.ToArray();
         }
     }
 }

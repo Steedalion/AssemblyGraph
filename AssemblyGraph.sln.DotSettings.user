@@ -7,9 +7,10 @@
     &lt;TestId&gt;NUnit3x::0F8C6F0A-5C39-43B6-BA4C-CF1F24F250E4::.NETFramework,Version=v2.0::Tests.Tests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5b5cab5e_002D58bf_002D4749_002Da2eb_002Dc92d6f0e364d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GraphEdgesWithCosts" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=899ff00a_002Dfa7a_002D4905_002Db1a9_002D5c9740d65fb2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BFS" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
 	
 	
 	</wpf:ResourceDictionary>

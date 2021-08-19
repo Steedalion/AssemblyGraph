@@ -14,12 +14,7 @@ namespace Graph
             AddEdgeBetweenNodes(1, 2);
         }
 
-        private SimpleEdge AddEdgeBetweenNodes(int from, int to)
-        {
-            SimpleEdge edge = new SimpleEdge(from, to);
-            graph.AddEdge(edge);
-            return edge;
-        }
+       
 
         [Test]
         public void AddEdgeWithoutNodes()
