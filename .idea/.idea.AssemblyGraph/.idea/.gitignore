@@ -1,0 +1,11 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/.idea.AssemblyGraph.iml
+/modules.xml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\steed\RiderProjects\AssemblyGraph\.idea\.idea.AssemblyGraph\.idea/dataSources/
+/dataSources.local.xml
