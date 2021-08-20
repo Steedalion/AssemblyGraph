@@ -10,7 +10,7 @@
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>AssemblyGraph</RootNamespace>
         <AssemblyName>AssemblyGraph</AssemblyName>
-        <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+        <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,9 +33,6 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
-          <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
-        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Xml" />
@@ -44,10 +41,20 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AssemblyComponent.cs" />
+        <Compile Include="AssemblyNode.cs" />
+        <Compile Include="ComponentNode.cs" />
+        <Compile Include="ConnectorNode.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\GraphDomain\GraphDomain.csproj">
+        <Project>{6e24f13f-c6a1-44a0-81d5-6a31e40031e6}</Project>
+        <Name>GraphDomain</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
