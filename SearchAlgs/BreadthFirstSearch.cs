@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using GraphDomain;
 
-namespace BFS
+namespace Search
 {
     public class BreadthFirstSearch<Node,Edge> where Node : GNode where Edge : GEdge
     {

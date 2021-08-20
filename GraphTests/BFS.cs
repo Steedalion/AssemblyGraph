@@ -1,6 +1,6 @@
-﻿using BFS;
-using GraphDomain;
+﻿using GraphDomain;
 using NUnit.Framework;
+using Search;
 
 namespace Graph
 {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GraphDomain
 {
-    internal class EdgeStore<Edge> where Edge : GEdge
+    public class DigraphStore<Edge> : IEdgeStore<Edge> where Edge : GEdge
     {
         private readonly Dictionary<int, Dictionary<int, Edge>> edges = new Dictionary<int, Dictionary<int, Edge>>();
 

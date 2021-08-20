@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using GraphDomain;
+﻿using GraphDomain;
 
 namespace Graph
 {

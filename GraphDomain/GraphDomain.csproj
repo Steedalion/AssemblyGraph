@@ -39,9 +39,11 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AddingEdgeWithoutNode.cs" />
-        <Compile Include="EdgeStore.cs" />
+        <Compile Include="BigraphStore.cs" />
+        <Compile Include="DigraphStore.cs" />
         <Compile Include="GEdge.cs" />
         <Compile Include="GNode.cs" />
+        <Compile Include="IEdgeStore.cs" />
         <Compile Include="IndexStore.cs" />
         <Compile Include="Graph.cs" />
         <Compile Include="NodeStore.cs" />

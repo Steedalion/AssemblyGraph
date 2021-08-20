@@ -2,11 +2,11 @@
 {
     public class Graph<Node, Edge> where Edge : GEdge where Node : GNode
     {
-        EdgeStore<Edge> edges = new EdgeStore<Edge>();
+        DigraphStore<Edge> digraphs = new DigraphStore<Edge>();
         NodeStore<Node> nodes = new NodeStore<Node>();
         private IndexStore indexs = new IndexStore();
         private Node start, target;
-        public string EdgesAsString => edges.ToString();
+        public string EdgesAsString => digraphs.ToString();
 
         public int GetNextAvailableIndex()
         {
@@ -40,22 +40,22 @@
                 throw new AddingEdgeWithoutNode();
             }
 
-            edges.Add(edge);
+            digraphs.Add(edge);
         }
 
         public int NumberOfEdges()
         {
-            return edges.Count;
+            return digraphs.Count;
         }
 
         public void RemoveEdge(int start, int end)
         {
-            edges.Remove(start, end);
+            digraphs.Remove(start, end);
         }
 
         public Edge GetEdge(int start, int end)
         {
-            return edges.GetEdge(start, end);
+            return digraphs.GetEdge(start, end);
         }
 
         public bool isPresent(int nodeIndex)
@@ -65,7 +65,7 @@
 
         public int[] GetOutWardEdges(int nodeIndex)
         {
-            return edges.GetOutwardEdges(nodeIndex);
+            return digraphs.GetOutwardEdges(nodeIndex);
         }
     }
 

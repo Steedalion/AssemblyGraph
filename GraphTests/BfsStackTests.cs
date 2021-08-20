@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using BFS;
 using GraphDomain;
 using NUnit.Framework;
+using Search;
 
 namespace Graph
 {
@@ -118,16 +118,6 @@ namespace Graph
             Assert.False(search.found);
             search = new BreadthFirstSearch<SimpleNode, SimpleEdge>(graph, 1, 4);
             Assert.True(search.found);
-        }
-
-        [Test]
-        public void ForEmptyArray()
-        {
-            int[] empty = new int[0];
-            foreach (int i in empty)
-            {
-                Assert.Fail();
-            }
         }
     }
 }
