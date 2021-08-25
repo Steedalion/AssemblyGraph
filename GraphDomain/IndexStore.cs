@@ -2,7 +2,7 @@
 
 namespace GraphDomain
 {
-    internal class IndexStore
+    public class IndexStore
     {
         private HashSet<int> store = new HashSet<int>();
 

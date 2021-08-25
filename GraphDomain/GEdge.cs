@@ -19,5 +19,7 @@
             endAt = to;
             Cost = edgeCost;
         }
+
+        public static int InvalidIndex { get; } = -1;
     }
 }

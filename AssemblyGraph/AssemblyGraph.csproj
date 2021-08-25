@@ -45,6 +45,7 @@
         <Compile Include="AssemblyNode.cs" />
         <Compile Include="ComponentNode.cs" />
         <Compile Include="ConnectorNode.cs" />
+        <Compile Include="ConnectorsEdge.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
