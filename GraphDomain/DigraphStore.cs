@@ -9,6 +9,11 @@ namespace GraphDomain
     {
         private readonly Dictionary<int, Dictionary<int, Edge>> edges = new Dictionary<int, Dictionary<int, Edge>>();
 
+        public List<KeyValuePair<int, Dictionary<int, Edge>>> ToList()
+        {
+            List<KeyValuePair<int, Dictionary<int, Edge>>> asList = edges.ToList();
+            return asList;
+        }
         public int Count
         {
             get

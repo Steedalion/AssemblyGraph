@@ -46,6 +46,7 @@
         <Compile Include="GraphBaseTests.cs" />
         <Compile Include="GraphEdgesWithCosts.cs" />
         <Compile Include="GraphEdgeTests.cs" />
+        <Compile Include="NodeStoreTests.cs" />
         <Compile Include="NodeTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="SimpleEdge.cs" />
