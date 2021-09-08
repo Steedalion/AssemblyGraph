@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GraphDomain
 {
-    public class NodeStore<Node> where Node : GNode
+    public class NodeStore<Node> : IEnumerable<Node> where Node : GNode
     {
         private Dictionary<int, Node> nodes = new Dictionary<int, Node>();
         public int Count => nodes.Count;
@@ -24,6 +26,15 @@ namespace GraphDomain
             return nodes.ContainsKey(nodeIdex);
         }
 
+            public IEnumerator GetEnumerator()
+        {
+            return nodes.Values.GetEnumerator();
+        }
+        IEnumerator<Node> IEnumerable<Node>.GetEnumerator()
+        {
+            return nodes.Values.GetEnumerator();
+        }
+
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
@@ -35,6 +46,9 @@ namespace GraphDomain
 
             return builder.ToString();
         }
+
+    
+
 
         public int GetNextAvailableIndex()
         {

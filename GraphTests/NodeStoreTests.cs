@@ -6,9 +6,9 @@ namespace Graph
 {
     public class NodeStoreTests
     {
+        NodeStore<SimpleNode> store;
 
-                    NodeStore<SimpleNode> store;
-[SetUp]
+        [SetUp]
         public void Setup()
         {
             store = new NodeStore<SimpleNode>();
@@ -68,6 +68,20 @@ namespace Graph
             store.Add(node2);
             Assert.AreEqual(2, store.Count);
             Assert.AreEqual(1, store.GetNextAvailableIndex());
+        }
+
+        [Test]
+        public void ForeachWithNodeStore()
+        {
+             SimpleNode node = new SimpleNode(0);
+            SimpleNode node2 = new SimpleNode(2);
+            store.Add(node);
+            store.Add(node2);
+
+            foreach (SimpleNode simpleNode in store)
+            {
+                Assert.NotNull(simpleNode);
+            }
         }
     }
 }

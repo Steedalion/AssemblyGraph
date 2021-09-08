@@ -42,7 +42,7 @@
     <ItemGroup>
         <Compile Include="BFS.cs" />
         <Compile Include="BfsStackTests.cs" />
-        <Compile Include="EdgeWithoutCosts.cs" />
+        <Compile Include="GraphEdgeWithoutCosts.cs" />
         <Compile Include="GraphBaseTests.cs" />
         <Compile Include="GraphEdgesWithCosts.cs" />
         <Compile Include="GraphEdgeTests.cs" />

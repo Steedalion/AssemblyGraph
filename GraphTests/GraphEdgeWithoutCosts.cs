@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Graph
 {
-    public class EdgeWithoutCosts : GraphEdgeTests
+    public class GraphEdgeWithoutCosts : GraphEdgeTests
     {
         [Test]
         public void AddSimpleEdge()
@@ -13,8 +13,6 @@ namespace Graph
             AddNodeWithIndex(2);
             AddEdgeBetweenNodes(1, 2);
         }
-
-       
 
         [Test]
         public void AddEdgeWithoutNodes()
@@ -93,6 +91,29 @@ namespace Graph
             SimpleEdge twoThree = AddEdgeBetweenNodes(2, 3);
             Assert.AreEqual(twoThree, graph.GetEdge(2, 3));
             Assert.AreEqual(oneTwo, graph.GetEdge(1, 2));
+        }
+
+        [Test]
+        public void CreateDigraphByDefault()
+        {
+            Assert.IsTrue(graph.digraph);
+            Assert.IsTrue(graph.edges is DigraphStore<SimpleEdge>);
+        }
+
+        [Test]
+        public void CreateBigraphEdges()
+        {
+            graph = new Graph<SimpleNode, SimpleEdge>(false);
+                        Assert.IsFalse(graph.digraph);
+
+            Assert.IsTrue(graph.edges is BigraphStore<SimpleEdge>);
+        }
+        [Test]
+        public void CreateDigraphEdgesConstructor()
+        {
+            graph = new Graph<SimpleNode, SimpleEdge>(true);
+            Assert.IsTrue(graph.digraph);
+            Assert.IsTrue(graph.edges is DigraphStore<SimpleEdge>);
         }
     }
 }

@@ -1,12 +1,30 @@
-﻿namespace GraphDomain
+﻿using System;
+
+namespace GraphDomain
 {
     public class Graph<Node, Edge> where Edge : GEdge where Node : GNode
     {
-        DigraphStore<Edge> digraphs = new DigraphStore<Edge>();
-        NodeStore<Node> nodes = new NodeStore<Node>();
+        public DigraphStore<Edge> edges;
+        public NodeStore<Node> nodes = new NodeStore<Node>();
+        public bool digraph { get; private set; } = true;
         private IndexStore indexs = new IndexStore();
         private Node start, target;
-        public string EdgesAsString => digraphs.ToString();
+        public string EdgesAsString => edges.ToString();
+
+        public Graph()
+        {edges = new DigraphStore<Edge>();
+        }
+
+        public Graph(bool digraph)
+        {
+            this.digraph = digraph;
+            if (this.digraph)
+            {
+                edges = new DigraphStore<Edge>();
+                return;
+            }
+            edges = new BigraphStore<Edge>();
+        }
 
         public int GetNextAvailableIndex()
         {
@@ -40,22 +58,22 @@
                 throw new AddingEdgeWithoutNode();
             }
 
-            digraphs.Add(edge);
+            edges.Add(edge);
         }
 
         public int NumberOfEdges()
         {
-            return digraphs.Count;
+            return edges.Count;
         }
 
         public void RemoveEdge(int start, int end)
         {
-            digraphs.Remove(start, end);
+            edges.Remove(start, end);
         }
 
         public Edge GetEdge(int start, int end)
         {
-            return digraphs.GetEdge(start, end);
+            return edges.GetEdge(start, end);
         }
 
         public bool isPresent(int nodeIndex)
@@ -65,7 +83,7 @@
 
         public int[] GetOutWardEdges(int nodeIndex)
         {
-            return digraphs.GetOutwardEdges(nodeIndex);
+            return edges.GetOutwardEdges(nodeIndex);
         }
     }
 
