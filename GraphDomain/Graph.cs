@@ -33,6 +33,7 @@ namespace GraphDomain
 
         public int AddNode(Node node1)
         {
+            //What happens to invalid indexed nodes
             indexs.Add(node1.Index);
             nodes.Add(node1);
             return node1.Index;

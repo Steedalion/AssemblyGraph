@@ -27,6 +27,20 @@ namespace Graph
         }
 
         [Test]
+        public void AddTwoNoIdexNodes()
+        {
+            SimpleNode one = new SimpleNode();
+            SimpleNode two = new SimpleNode();
+            int onesIndex = graph.AddNode(one);
+            int twoIndex = graph.AddNode(two);
+            Assert.AreNotEqual(onesIndex,twoIndex);
+            Assert.IsTrue(graph.nodes.Contains(one.Index));
+            Assert.IsTrue(graph.nodes.Contains(two.Index));
+            Assert.AreSame(one,graph.GetNode(one.Index));
+            Assert.AreSame(two,graph.GetNode(two.Index));
+        }
+
+        [Test]
         public void AddNodeWithCustomIndex()
         {
             int returnedIndex = graph.AddNode(simpleNode);

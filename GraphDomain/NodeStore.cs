@@ -13,6 +13,10 @@ namespace GraphDomain
 
         public void Add(Node node)
         {
+            if (node.Index == GNode.InvalidNodeIndex)
+            {
+                node.Index = GetNextAvailableIndex();
+            }
             nodes[node.Index] = node;
         }
 
