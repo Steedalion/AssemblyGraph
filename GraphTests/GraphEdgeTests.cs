@@ -10,5 +10,7 @@ namespace Graph
         {
             graph = new Graph<SimpleNode, SimpleEdge>();
         }
+
+     
     }
 }

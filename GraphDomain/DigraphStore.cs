@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace GraphDomain
 {
-    public class DigraphStore<Edge> : IEdgeStore<Edge> where Edge : GEdge
+    public class DigraphStore<Edge> : IEdgeStore<Edge>, IEnumerable<Edge> where Edge : GEdge
     {
         private readonly Dictionary<int, Dictionary<int, Edge>> edges = new Dictionary<int, Dictionary<int, Edge>>();
 
@@ -14,6 +15,7 @@ namespace GraphDomain
             List<KeyValuePair<int, Dictionary<int, Edge>>> asList = edges.ToList();
             return asList;
         }
+
         public int Count
         {
             get
@@ -55,6 +57,8 @@ namespace GraphDomain
         }
 
 
+      
+
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
@@ -71,6 +75,20 @@ namespace GraphDomain
 
             return builder.ToString();
         }
+
+          IEnumerator<Edge> IEnumerable<Edge>.GetEnumerator()
+        {
+            return ToList().Select(pair => pair.Value).SelectMany(dictionary => dictionary.Values).GetEnumerator();
+        }
+        public IEnumerator GetEnumerator()
+        {
+            return ToList().Select(pair => pair.Value).SelectMany(dictionary => dictionary.Values).GetEnumerator();
+        }
+
+        // public IEnumerator GetEnumerator()
+        // {
+        //     return ToList().Select(pair => pair.Value).Select(edges => edges.Values).GetEnumerator();
+        // }
 
         public int[] GetOutwardEdges(int nodeIndex)
         {

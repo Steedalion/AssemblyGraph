@@ -14,7 +14,7 @@ namespace Graph
         private SimpleNode smallNode;
         private SimpleNode largeNode;
         private SimpleNode mediumNode;
-        
+
         private SimpleEdge wrongOrder;
         private SimpleEdge correctOrder;
 
@@ -22,7 +22,7 @@ namespace Graph
         public void Create()
         {
             distore = new BigraphStore<SimpleEdge>();
-        
+
             smallNode = new SimpleNode(small);
             largeNode = new SimpleNode(large);
             mediumNode = new SimpleNode(medium);
@@ -106,9 +106,9 @@ namespace Graph
             SimpleEdge edge = new SimpleEdge(small, medium);
             distore.Add(edge);
             distore.Add(wrongOrder);
-            Assert.AreEqual(2,distore.Count);
+            Assert.AreEqual(2, distore.Count);
             var outwardEdges = distore.GetOutwardEdges(small);
-            Assert.AreEqual(2,outwardEdges.Length);
+            Assert.AreEqual(2, outwardEdges.Length);
             outwardEdges.Contains(medium);
             outwardEdges.Contains(large);
         }
@@ -118,7 +118,24 @@ namespace Graph
         {
             distore.Add(correctOrder);
             distore.Add(wrongOrder);
-            Assert.AreEqual(1,distore.Count);
+            Assert.AreEqual(1, distore.Count);
+        }
+
+        [Test]
+        public void ForeachEdges()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                SimpleEdge edge = new SimpleEdge(i, 2 * i, i);
+                distore.Add(edge);
+            }
+
+            int j = 0;
+            foreach (SimpleEdge edge in distore)
+            {
+                Assert.AreEqual(edge.Cost, j, 0.001f);
+                j++;
+            }
         }
     }
 }

@@ -3,10 +3,10 @@
   &lt;Assembly Path="C:\Users\steed\RiderProjects\AssemblyGraph\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll" /&gt;&#xD;
   &lt;Assembly Path="C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Data\Managed\UnityEngine.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=004b4c5a_002D1b9a_002D44cf_002Daad7_002D2c7952fe34aa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=004b4c5a_002D1b9a_002D44cf_002Daad7_002D2c7952fe34aa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f7fc3fa_002Dc4ae_002D492e_002D92aa_002D8e64be54a26e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f7fc3fa_002Dc4ae_002D492e_002D92aa_002D8e64be54a26e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	
